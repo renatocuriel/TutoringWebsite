@@ -3,25 +3,64 @@ import { Link } from 'react-router-dom';
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
-import Button from '@mui/material/Button';
-// import styled from 'styled-components';
+import styled from 'styled-components';
 
-// const NavButton = styled(Button)`
-//     color: white;
-//     text-transform: none; /* Keeps the text in its original case */
-// `;
+const TitleBar = styled(AppBar)`
+    background-color: darkgreen;
+    color: white;
+    padding: 1em 0;
+    align-items: center;
+    box-shadow: solid 1px gold;
+`;
+
+const NavBar = styled(AppBar)`
+    background-color: #e6c300;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 3em;
+    box-shadow: solid 1px gray;
+`;
+
+const NavButton = styled(Link)`
+    color: darkgreen;
+    text-decoration: none;
+    padding: 0 1em;
+    font-size: 1.2em;
+    text-transform: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover {
+        color: darkgreen;
+        font-weight: bold;
+    }
+
+    &.active {
+        color: darkgreen;
+        font-weight: bold;
+    };
+`;
 
 const Header = () => (
-    <AppBar position="static">
-        <Toolbar sx={{ justifyContent: 'center'}}>
-            <Typography variant="h5" component="div" >
-                Cal Poly Computer Engineering Tutoring
-            </Typography>
-            <Button component={Link} to="/">Home</Button>
-            <Button component={Link} to="/courses">Courses</Button>
-            <Button component={Link} to="/request-tutoring">Request Tutoring</Button>
-        </Toolbar>
-    </AppBar>
+    <>
+        <TitleBar position="static">
+            <Toolbar sx={{ justifyContent: 'center'}}>
+                <Typography variant="h5" component="div" sx={{fontFamily: 'sans-serif', fontWeight: 'bold'}}>
+                    Cal Poly Computer Engineering Tutoring
+                </Typography>
+            </Toolbar>
+        </TitleBar>
+
+        <NavBar position="static">
+            <Toolbar sx={{ justifyContent: 'center'}}>
+                <NavButton to="/">Home</NavButton>
+                <NavButton to="/courses">Courses</NavButton>
+                <NavButton to="/request-tutoring">Request Tutoring</NavButton>
+            </Toolbar>
+        </NavBar>
+    </>
 );
 
 export default Header;
