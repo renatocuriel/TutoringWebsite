@@ -6,20 +6,20 @@ import Typography from '@mui/material/Typography';
 import styled from 'styled-components';
 
 const TitleBar = styled(AppBar)`
-    background-color: darkgreen;
-    color: white;
+    background-color: darkgreen !important;
+    color: white !important;
     padding: 1em 0;
     align-items: center;
-    box-shadow: solid 1px gold;
+    box-shadow: 0px 1px 5px gold !important;
 `;
 
 const NavBar = styled(AppBar)`
-    background-color: #e6c300;
+    background-color: #e6c300 !important;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 3em;
-    box-shadow: solid 1px gray;
+    box-shadow: 0px 1px 5px gray !important;
 `;
 
 const NavButton = styled(Link)`
