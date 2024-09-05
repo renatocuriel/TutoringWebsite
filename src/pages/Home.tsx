@@ -4,7 +4,14 @@ import { Container, Grid2, Typography, Button, Box } from '@mui/material';
 const Home: React.FC = () => {
   return (
     <div style={styles.container}>
-
+      <div style={styles.heroSection}>
+        <h1 style={styles.heroText}>Welcome!</h1>
+        <img
+          src="/headshot.jpeg"
+          alt="headshot"
+          style={styles.heroImage}
+        />
+      </div>
 
     </div>
   );
@@ -13,11 +20,11 @@ const Home: React.FC = () => {
 const styles = {
   container: {
     backgroundColor: '#FFFFFF', // White background
-    padding: '20px',
+    padding: '0px',
   },
   heroSection: {
-    textAlign: 'center',
-    padding: '50px 0',
+    textAlign: 'center' as 'center',
+    padding: '0px 0',
   },
   heroText: {
     color: '#2C5234', // Dark green color
